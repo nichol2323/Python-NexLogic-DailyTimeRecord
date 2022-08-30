@@ -166,6 +166,8 @@ def process_status(message):
 @bot.message_handler(commands=['secret'])
 def process_secret_command(message):
     bot.reply_to(message, "Last Update: 8/5/2022")
+    chat_id = message.chat.id
+    bot.send_message(chat_id, ' Congratulations, Sean Ison! You have been awarded the August 2022 employee of the month.')
 
 # Enable saving next step handlers to file "./.handlers-saves/step.save".
 # Delay=2 means that after any change in next step handlers (e.g. calling register_next_step_handler())
