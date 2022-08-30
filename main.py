@@ -101,8 +101,7 @@ def process_timeout(message):
     username = message.chat.username
     finduser = wksnames.find(username)
     nofind = int(len(finduser))
-    chat_id = message.chat.id
-    bot.send_message(chat_id, ' Congratulations, Sean Ison! You have been awarded the August 2022 employee of the month.')
+    
     if nofind >= 1:
         try:
             now2 = datetime.now(pytz.timezone('Asia/Manila'))
@@ -134,6 +133,8 @@ def process_timeout(message):
             bot.reply_to(message, 'Something went wrong. Please try again')
     else:
         bot.reply_to(message, 'Only Intern member can use this bot')
+    chat_id = message.chat.id
+    bot.send_message(chat_id, ' Congratulations, Sean Ison! You have been awarded the August 2022 Employee of the month.')
 
 
 # Status
